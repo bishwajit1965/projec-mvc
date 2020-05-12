@@ -1,40 +1,75 @@
-/**
- * Project is creaqted on 14/9/2018
- * It is an MVC pattern of codiqng in ooph pdo
- */
-
+/*
+	Project is created on 14/9/2018
+	It is an MVC pattern of coding in object oriented php & pdo
+*/
 /* Body
 ===============*/
-body {
-	background-image: url('../../img/patterns/pattern7.jpg');
-	background-attachment: fixed;
-}
+body {background-image: url('../../img/patterns/pattern.jpg');background-attachment: fixed;}
 /* Header area
 ===============*/
-.header {
-	color:#EDEFF0;
-	text-shadow: 1px 2px 3px #000 ;
-}
+.header {color:#EDEFF0;text-shadow: 1px 2px 3px #000 ;}
 
-.header img {
-	width:100px; height:50px;
-}
+.header img {width:100px; height:50px;}
 /* Main container
 ================*/
 .container {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 /* Main content
 ================*/
-.main-content {
-	border-top:3px solid #DDD;
-	border-bottom:3px solid #DDD;
-	margin-top:1px;
-	margin-bottom:1px;
-	min-height:400px;
-	background-color: #ffffff;
-}
+.main-content {min-height:400px;background-color: #FFFFFF;}
+.main-content-sidebar {min-height:400px;background-color: #ffffff;}
 /*Footer area
-================*/
-.footer {
-	color:#FFF;
-	text-align: center;
+=============*/
+.footer {color:#FFF;text-align: center;}
+/* Post content area
+====================*/
+
+.page-header>h2 {background-color: #E4E4E4;padding: 5px 5px 5px 5px;font-weight: 900;border-radius: 5px;color:#A8A8A9;text-shadow: 1px 2px 3px #000;}
+.page-title>h2 {font-weight: 900;}
+.page-content-border-top {background-color: #e4e4e499;height:3px;}
+.post>a{text-decoration:none;color:#000;}
+.post>a>h2{color:#2d2d2d;font-weight: 800;}
+.post>span>a:hover{color: #ffff0d;}
+.post-detail>p {color: #7f7f7f;font-size: 15px;font-weight: 800;}
+.post-detail>p #particular {color: #646464;font-size: 18px;font-weight: 800;}
+.post-synopsis>p {margin-bottom: 0px;}
+.post-synopsis {background-color: #D4EDDA;padding: 4px;border-left: 5px solid#0080ff;margin-bottom: 20px;}
+.social-links-button {font-size: 22px;}
+
+/* Article Index Sidebar
+========================*/
+.sidebar>h2{background-color: #E4E4E4;padding: 5px 5px 5px 5px;font-weight: 800;border-radius: 5px;color:#A8A8A9;text-shadow: 1px 2px 3px #000;}
+.sidebar>ul{margin: 0;padding: 0;list-style: none;}
+.sidebar>ul>li{background-color: #E4E4E4;border-bottom: 1px solid #98C;border-top: 1px solid #FFF;padding: 5px;}
+.sidebar>ul>li:last-child{border-bottom: 0px dotted #EDEFF0;padding: 5px;}
+.sidebar>ul>li:hover{background-color: #EDEFF0;border-bottom: 1px dotted #7b8a91;}
+.sidebar>ul>li>a{text-decoration: none;font-weight: 700;display: block;color: #666;text-transform: uppercase;}
+.sidebar>ul>li>a:hover{color: #bf0000;font-weight: 900;}
+/* side abr recent posts section */
+.recent-posts>h2{margin-top:10px;background-color: #E4E4E4;padding: 5px 5px 5px 5px;font-weight: 800;border-radius: 5px;color:#A8A8A9;text-shadow: 1px 2px 3px #000;}
+.recent-posts>ul{margin: 0;padding: 0;list-style: none;}
+.recent-posts>ul>li{background-color: #E4E4E4;border-bottom: 1px solid #98C;border-top: 1px solid #FFF;padding: 5px;}
+.recent-posts>ul>li:last-child{border-bottom: 0px dotted #EDEFF0;padding: 5px;}
+.recent-posts>ul>li:hover{background-color: #EDEFF0;border-bottom: 1px dotted #7b8a91;}
+.recent-posts>ul>li>a{text-decoration: none;font-weight: 700;display: block;color: #666;text-transform: uppercase;}
+.recent-posts>ul>li>a:hover{color: #bf0000;font-weight: 900;}
+
+/* Login form
+=============*/     
+.login-form {border:1px solid #DDD; padding:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+/* Admin panel sidebar 
+ =====================*/
+.sidebar-menu-heading>h6{background-color: #ccd8d7;padding: 8px 8px 8px 8px;font-weight: 800;font-size:18px;color:#333;margin:0;text-align: center;border-radius: 3px;}
+.sidebar-menu-heading>ul{margin: 0;padding: 0;list-style: none;}
+.sidebar-menu-heading>ul>li{background-color: #E4E4E4;border-bottom: 1px solid #c1c1c1;border-top: 1px solid #FFF;padding: 3px;}
+.sidebar-menu-heading>ul>li:last-child{border-bottom: 0px solid #b4b4b4;padding: 3px;}
+.sidebar-menu-heading>ul>li:hover{background-color: #EDEFF0;border-bottom: 1px dotted #b4b4b4;}
+.sidebar-menu-heading>ul>li>a{text-decoration: none;font-weight: 700;display: block;color: #666;padding-left: 10px;}
+.sidebar-menu-heading>ul>li>a:hover{color: #000;font-weight: 900;}
+
+/* Admin main content header */
+.admin-panel-page-header>h6{background-color: #ccd8d7;padding: 8px 8px 8px 8px;font-weight: 800;font-size:18px;color:#333;text-transform: capitalize;border-radius: 3px;}
+/* Log out li */
+#log-out:hover{
+	color: #bf0000;
 }

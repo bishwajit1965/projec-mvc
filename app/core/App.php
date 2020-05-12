@@ -4,7 +4,7 @@ class App
 {
     protected $controller = 'homeController';
     protected $method = 'index';
-    protected $params = [];
+    protected $params = [1,2,3,4,5,6];
     /**
      * Constructor to generate url
      */
@@ -23,6 +23,7 @@ class App
                 unset($url[1]);
             }
         }
+
         $this->params = $url ? array_values($url) : [];
         call_user_func_array([$this->controller, $this->method], $this->params);
     }

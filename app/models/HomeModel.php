@@ -9,4 +9,7 @@ class HomeModel extends ParentModel
     public function index()
     {
     }
+    public function home()
+    {
+    }
 }

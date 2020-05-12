@@ -7,17 +7,32 @@ class ContactController extends Controller
     {
         parent::__construct();
     }
+    /**
+     * Default page loader method
+     *
+     * @return void
+     */
     public function index()
     {
-        $this->model('ParentModel');
-        $this->view('home/contact', []);
+        $this->view('templates/head', []);
+        $this->view('templates/header', []);
+        $this->view('templates/links', []);
+
+        $this->model('HomeModel');
+        $this->view('home/index', []);
+        $this->view('templates/footer', []);
     }
     
     public function contactUs()
     {
+        $this->view('templates/head', []);
+        $this->view('templates/header', []);
+        $this->view('templates/links', []);
+
         // Model loaded
-        $this->model('ParentModel');
+        $this->model('HomeModel');
         // View page loaded using function
         $this->view('home/contact', []);
+        $this->view('templates/footer', []);
     }
 }
