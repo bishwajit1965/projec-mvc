@@ -15,7 +15,8 @@
     <script src="https://kit.fontawesome.com/1b551efcfa.js"></script>
     <script src="ckeditor/ckeditor.js"></script>
     <!-- Place favicon.ico in the root directory -->
-
+    <!-- Data tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <title>Project mvc</title>
     <link rel="stylesheet" type="text/css" href="inc/css/main.css">
 </head>

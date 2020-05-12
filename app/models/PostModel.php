@@ -35,6 +35,19 @@ class PostModel extends ParentModel
         return $this->dbHandler->select($sql, $data) ;
     }
     /**
+     * For edit view
+     *
+     * @param string $table
+     * @param integer $postId
+     *
+     * @return mixed
+     */
+    public function postById($tableArticle, $postId)
+    {
+        $sql = "SELECT * FROM $tableArticle WHERE id = :$postId";
+        return $this->dbHandler->select($sql) ;
+    }
+    /**
      * Will fetch posts from tbl_article for recent posts option
      *
      * @param string $table

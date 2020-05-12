@@ -56,7 +56,7 @@ class Database extends PDO
      *
      * @return mixed
      */
-    public function select($sql, $fields= [], $fetchStyle=PDO::FETCH_OBJ)
+    public function select($sql, $fields= [], $fetchStyle = PDO::FETCH_OBJ)
     {
         $stmt = $this->prepare($sql);
         foreach ($fields as $key => $value) {

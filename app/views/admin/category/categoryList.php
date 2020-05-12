@@ -14,8 +14,8 @@
         }
         ?>
         <div class="right-content-loader">
-            <table class="table table-sm">
-                <thead>
+            <table class="table table-striped table-sm display" id="myTable" data-page-length='5'>
+                <thead class="thead-dark">
                     <tr>
                         <th>#</th>
                         <th>Category</th>
@@ -40,8 +40,8 @@
                             <?php echo $Category->title; ?>
                         </td>
                         <td>
-                            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                            <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</a>
+                            <a href="#" class="btn btn-primary btn-sm myButton"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="#" class="btn btn-danger btn-sm myButton"><i class="fas fa-trash"></i> Delete</a>
                         </td>
                     </tr>
                     <?php

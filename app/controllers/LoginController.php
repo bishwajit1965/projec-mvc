@@ -21,9 +21,6 @@ class LoginController extends Controller
 
         // views/templates footer.php file loaded
         $this->view('templates/footer', []);
-
-        Session::init();
-        Session::checkLogin();
     }
     public function loginAuthentication($result='')
     {

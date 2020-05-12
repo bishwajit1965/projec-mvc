@@ -73,3 +73,5 @@ body {background-image: url('../../img/patterns/pattern.jpg');background-attachm
 #log-out:hover{
 	color: #bf0000;
 }
+/* Button */
+.myButton {font-size: 12px; height: 25px; }

@@ -24,9 +24,9 @@
         <div class="sidebar-menu-heading rounded pt-2">
             <h6>Article option</h6>
             <ul>
-                <li><a href="<?php echo BASE_URL;?>?url=PostController/create"><i class="fas fa-plus"></i> Add
-                        article</a></li>
-                <li><a href="<?php echo BASE_URL;?>?url=PostController"><i class="fas fa-list"></i> Article
+                <li><a href="<?php echo BASE_URL;?>?url=PostController/create">
+                        <i class="fas fa-plus"></i> Add article</a></li>
+                <li><a href="<?php echo BASE_URL;?>?url=PostController/postIndex"><i class="fas fa-list"></i> Article
                         list</a></li>
             </ul>
         </div>

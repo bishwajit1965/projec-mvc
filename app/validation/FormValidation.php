@@ -30,6 +30,13 @@ class FormValidation
         }
         return $this;
     }
+    public function emptyCategory()
+    {
+        if ($this->values[$this->currentValue] == 0) {
+            $this->errors[$this->currentValue]['empty'] = " field must not be empty.";
+        }
+        return $this;
+    }
     public function length($min=0, $max)
     {
         if (strlen($this->values[$this->currentValue]) < $min  or strlen($this->values[$this->currentValue]) > $max) {

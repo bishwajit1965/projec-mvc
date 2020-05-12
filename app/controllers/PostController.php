@@ -346,6 +346,9 @@ class PostController extends Controller
     // Will save post to database
     public function store($result='', $category='', $posts='', $message ='', $postErrors='')
     {
+        if (!($_POST)) {
+            header("Location:".BASE_URL."?url=PostController/create");
+        }
         // views/templates files loaded
         $this->view('templates/head', []);
         $this->view('templates/header', []);
@@ -383,7 +386,8 @@ class PostController extends Controller
         ->empty();
 
         $input->post('category')
-        ->empty();
+        ->emptyCategory()
+        ->length('3', 100);
 
         // Input fields
         $title = $input->values['title'];
@@ -432,6 +436,12 @@ class PostController extends Controller
             // views/templates footer.php file loaded
             $this->view('templates/footer', []);
         } else {
+            // views/templates files loaded
+            $this->view('templates/head', []);
+            $this->view('templates/header', []);
+            $this->view('templates/links', []);
+            $this->view('admin/leftMenuPanel', []);
+            
             // Tables to fetch data from
             $tableCategory = 'tbl_category';
             // Category Model loaded and then method
@@ -444,11 +454,6 @@ class PostController extends Controller
             // Posts model loaded
             $postModel = $this->model('PostModel');
 
-            // views/templates files loaded
-            $this->view('templates/head', []);
-            $this->view('templates/header', []);
-            $this->view('templates/links', []);
-            $this->view('admin/leftMenuPanel', []);
             //Categories fetched
             $categoryModel->category = $categoryModel->categoryList($tableCategory);
     
@@ -460,8 +465,41 @@ class PostController extends Controller
         }
     }
     //  Show the form for editing the specified resource.
-    public function edit()
+    public function edit($posts='', $category='', $postId='')
     {
+        // views/templates files loaded
+        $this->view('templates/head', []);
+        $this->view('templates/header', []);
+        $this->view('templates/links', []);
+        $this->view('admin/leftMenuPanel', []);
+        // Table to fetch data from
+        $tableCategory = 'tbl_category';
+        $tableArticle = 'tbl_article';
+        // Category Model loaded and then method
+        $categoryModel = $this->model('CategoryModel');
+        // Post model loaded and then method
+        $postModel = $this->model('PostModel');
+
+        /**=================================================================
+        * Fetching posts data to be displayed on admin editArticle.php page
+        /===================================================================**/
+        // Posts variable is bound and assigned with model
+        $postModel->posts = $posts;
+        // Post model method is loaded
+        $postModel->posts = $postModel->showPostById($tableArticle, $postId);
+        var_dump($postModel->posts);
+        die();
+        // Category Model loaded and then method
+        $categoryModel = $this->model('CategoryModel');
+        // Category variable is bound and assigned with model
+        $categoryModel->category = $category;
+        // Will fetch category data
+        $categoryModel->category = $categoryModel->categoryList($tableCategory);
+        // Will send category and post data to home/index(Posts page)
+        $this->view('admin/article/editArticle', ['posts' => $postModel->posts,'category' =>  $categoryModel->category]);
+
+        // views/templates footer.php file loaded
+        $this->view('templates/footer', []);
     }
     // Update specific post
     public function update()
